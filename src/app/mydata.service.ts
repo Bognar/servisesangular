@@ -10,7 +10,7 @@ export class MydataService {
     {name: 'kristina', lastn: 'Šumiga', id: 2},
     {name: 'Jožef', lastn: 'bognar', id: 3}
   ];
-
+  
   constructor() { }
 
 getPeople() {
@@ -19,8 +19,8 @@ getPeople() {
 peopleReverse() {
   return this.people.reverse();
 }
-pushPeople() {
-  return this.people.push({name: 'Marko', lastn: 'Pekić', id: 4});
+pushPeople(arg:any) {
+  return this.people.push(arg);
 }
 popPeople() {
   return this.people.pop();

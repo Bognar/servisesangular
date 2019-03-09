@@ -13,13 +13,16 @@ export class AppComponent {
   people = [];
   name = [];
   title = 'servTesting';
+  namesfor={};
   
   constructor(private myService: MydataService) {
     this.people = myService.getPeople();
     this.name = myService.peopleReverse();
   }
   doit() {
-    this.myService.pushPeople();
+    this.namesfor = {name:'perica', lastn:'perić', id: 10};
+    this.myService.pushPeople(this.namesfor);
+    
   }
   undoit() {
     this.myService.popPeople();
